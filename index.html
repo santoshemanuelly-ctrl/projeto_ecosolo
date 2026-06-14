@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSolo - Adubação Orgânica e Química</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+    <header class="header-principal">
+        <div class="container-header">
+            <div class="logo">
+                <i class="fa-solid fa-seedling" aria-hidden="true"></i> Eco<span>Solo</span>
+            </div>
+            
+            <nav aria-label="Navegação Principal" class="nav-principal">
+                <ul class="menu-links">
+                    <li><a href="#diagnostico">Diagnóstico</a></li>
+                    <li><a href="#simulador">Simulador</a></li>
+                    <li><a href="#impactos">Impactos</a></li>
+                    <li><a href="#cases">Exemplos</a></li>
+                    <li><a href="#solucoes">Soluções</a></li>
+                </ul>
+            </nav>
+
+            <div class="controles-acessibilidade" role="toolbar" aria-label="Ferramentas de Acessibilidade">
+                <button id="btn-diminuir-fonte" title="Diminuir Fonte" aria-label="Diminuir tamanho da fonte">A-</button>
+                <button id="btn-aumentar-fonte" title="Aumentar Fonte" aria-label="Aumentar tamanho da fonte">A+</button>
+                <button id="btn-alto-contraste" title="Alternar Alto Contraste" aria-label="Alternar modo de alto contraste">
+                    <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="conteudo-principal">
+        
+        <section class="hero-section" aria-labelledby="titulo-hero">
+            <div class="container hero-grid">
+                <div class="hero-conteudo">
+                    <h1 id="titulo-hero">Como alimentar o solo sem esgotar o futuro do nosso planeta?</h1>
+                    <p class="subtitulo">A adubação move a agricultura mundial, mas o equilíbrio entre o laboratório quimico e os ciclos orgânicos da natureza esconde o maior desafio da sustentabilidade moderna.</p>
+                    <div class="hero-botoes">
+                        <a href="#diagnostico" class="btn btn-primario">Entender o Problema</a>
+                        <a href="#solucoes" class="btn btn-secundario">Conhecer Soluções</a>
+                    </div>
+                </div>
+                
+                <div class="hero-galeria" aria-label="Galeria de imagens sobre adubação">
+                    <div class="galeria-item Ativo">
+                        <img src="nutricaoorganica.png" alt="Mãos segurando terra preta rica em compostagem orgânica.">
+                        <p class="galeria-legenda">Nutrição Orgânica: Vida microbiana ativa no solo.</p>
+                    </div>
+                    <div class="galeria-item">
+                        <img src="nutricaoquimica.png" alt="Grânulos de fertilizante químico NPK sendo aplicados na lavoura.">
+                        <p class="galeria-legenda">Nutrição Mineral: Alta precisão e rápida absorção de NPK.</p>
+                    </div>
+                    <div class="galeria-controles">
+                        <button id="galeria-prev" aria-label="Imagem anterior">&#10094;</button>
+                        <button id="galeria-next" aria-label="Próxima imagem">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="diagnostico" class="secao-diagnostico" aria-labelledby="titulo-diagnostico">
+            <div class="container">
+                <h2 id="titulo-diagnostico" class="titulo-secao">O Cenário Atual do Solo</h2>
+                <p class="subtitulo-secao">Antes de agir, precisamos investigar: quais são as reais diferenças na forma como o solo processa esses insumos?</p>
+                <div id="grid-diagnostico" class="grid-cards-dinamicos">
+                    </div>
+            </div>
+        </section>
+
+        <section id="simulador" class="secao-interativa" aria-labelledby="titulo-simulador">
+            <div class="container">
+                <div class="card-simulador">
+                    <div class="simulador-info">
+                        <h2 id="titulo-simulador">Laboratório Virtual: O Simulador de Ecossistemas</h2>
+                        <p>O que acontece com a água, com os microrganismos e com a produtividade se você exagerar no fertilizante químico? E se usar apenas adubo orgânico a curto prazo? Teste suas decisões agronômicas!</p>
+                        
+                        <div class="controles-simulador">
+                            <label for="seletor-adubo">Escolha o plano de adubação:</label>
+                            <select id="seletor-adubo">
+                                <option value="equilibrio">100% Equilibrado (Orgânico + Químico Racional)</option>
+                                <option value="quimico-excesso">Excesso de Nitrogênio e Fósforo Químico</option>
+                                <option value="organico-puro">Apenas Orgânico de Lenta Absorção</option>
+                            </select>
+                            <button id="btn-simular" class="btn btn-primario">Executar Simulação</button>
+                        </div>
+                    </div>
+
+                    <div class="simulador-resultado" id="resultado-painel" aria-live="polite">
+                        <div class="status-tela">
+                            <i class="fa-solid fa-flask-vial" id="icone-simulador"></i>
+                            <h3 id="simulador-status-titulo">Pronto para iniciar</h3>
+                            <p id="simulador-status-desc">Selecione uma estratégia de adubação e clique no botão para ver os impactos ecológicos simulados em tempo real.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-panorama" aria-label="Indicadores Globais">
+            <div class="container grid-panorama" id="grid-panorama">
+                </div>
+        </section>
+
+        <section id="impactos" class="secao-impactos" aria-labelledby="titulo-impactos">
+            <div class="container">
+                <h2 id="titulo-impactos" class="titulo-secao">Os Desafios sob Múltiplas Perspectivas</h2>
+                
+                <div class="tabs-container">
+                    <div class="tab-list" role="tablist" aria-label="Perspectivas de Impacto">
+                        <button role="tab" aria-selected="true" aria-controls="painel-ambiental" id="tab-ambiental">Ambiental</button>
+                        <button role="tab" aria-selected="false" aria-controls="painel-economico" id="tab-economico" tabindex="-1">Econômico</button>
+                        <button role="tab" aria-selected="false" aria-controls="painel-tecnologico" id="tab-tecnologico" tabindex="-1">Tecnológico</button>
+                    </div>
+
+                    <div id="painel-ambiental" role="tabpanel" aria-labelledby="tab-ambiental" class="tab-painel">
+                        <h3>Impacto Ambiental e Biodiversidade</h3>
+                        <p>A adubação química em excesso pode causar a **eutrofização de rios e lençóis freáticos**, provocando a morte de ecossistemas aquáticos devido ao lixiviamento de nitratos. Já o adubo orgânico reconstrói a **microfauna do solo** (bactérias benéficas, fungos micorrízicos e minhocas), fixando carbono e mitigando as mudanças climáticas.</p>
+                    </div>
+
+                    <div id="painel-economico" role="tabpanel" aria-labelledby="tab-economico" class="tab-painel" hidden>
+                        <h3>Viabilidade Econômica e Produtividade</h3>
+                        <p>Fertilizantes químicos oferecem **retorno rápido de produtividade** e alta concentração de nutrientes por quilo, sendo ideais para culturas de larga escala com resposta imediata do mercado. O manejo orgânico exige maior volume de material e transporte dispendioso, mas gera **resiliência financeira a longo prazo**, reduzindo a dependência de insumos importados cotados em dólar.</p>
+                    </div>
+
+                    <div id="painel-tecnologico" role="tabpanel" aria-labelledby="tab-tecnologico" class="tab-painel" hidden>
+                        <h3>Inovação Tecnológica no Campo</h3>
+                        <p>A tecnologia moderna une os dois mundos através de **fertilizantes organominerais**, bioinsumos customizados, e agricultura de precisão controlada por IA e sensores foliares. Isso permite mapear exatamente as deficiências de NPK do solo e aplicar doses milimétricas na planta, evitando desperdícios e contaminações.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cases" class="secao-carrossel" aria-labelledby="titulo-carrossel">
+            <div class="container">
+                <h2 id="titulo-carrossel" class="titulo-secao">Estudos de Caso Reais</h2>
+                
+                <div class="carrossel-wrapper">
+                    <div class="carrossel-container" id="carrossel-container">
+                        
+                        <div class="carrossel-slide">
+                            <img src="milho.png" alt="Plantação de milho verdejante e saudável.">
+                            <div class="carrossel-texto">
+                                <h3>Cerrado Brasileiro: Integração Inteligente</h3>
+                                <p>Fazendas em Mato Grosso reduziram o uso de fertilizantes nitrogenados sintéticos em até 40% ao consorciar milho com braquiária e aplicar compostagem orgânica com microrganismos solubilizadores de fósforo.</p>
+                            </div>
+                        </div>
+
+                        <div class="carrossel-slide">
+                            <img src="uva.png" alt="Parreira de uvas em vinhedo sustentável.">
+                            <div class="carrossel-texto">
+                                <h3>Viticultura Orgânica na Europa</h3>
+                                <p>Produtores tradicionais de vinho na França aboliram adubos sintéticos solúveis, utilizando cascas de uvas recicladas e esterco maturado. O resultado foi um aumento drástico na retenção de água e resistência das videiras a secas severas.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button class="carrossel-btn btn-prev" id="btn-carrossel-prev" aria-label="Slide Anterior">&#10094;</button>
+                    <button class="carrossel-btn btn-next" id="btn-carrossel-next" aria-label="Próximo Slide">&#10095;</button>
+                    
+                    <div class="carrossel-dots" id="carrossel-dots"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-multimidia" aria-labelledby="titulo-multimidia">
+            <div class="container">
+                <h2 id="titulo-multimidia" class="titulo-secao">Materiais Complementares</h2>
+                <div class="multimidia-grid">
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="A_Metrópole_do_Solo.mp4" title="Vídeo Educativo: A Metrópole do Solo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="recursos-lista">
+                        <h3>Biblioteca Digital do Aluno</h3>
+                        <ul class="lista-links-extras">
+                            <li>
+                                <i class="fa-solid fa-microphone-lines"></i>
+                                <div>
+                                    <a href="#">Podcast: Microfauna e Vida Subterrânea</a>
+                                    <p>Entrevista com microbiologistas sobre o poder regenerativo do húmus.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-file-pdf"></i>
+                                <div>
+                                    <a href="#">Manual Prático de Compostagem Caseira</a>
+                                    <p>Guia passo a passo focado em hortas escolares e agricultura urbana.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solucoes" class="secao-solucoes" aria-labelledby="titulo-solucoes">
+            <div class="container">
+                <h2 id="titulo-solucoes" class="titulo-secao">Estratégias para uma Agricultura Sustentável</h2>
+                <p class="subtitulo-secao">A resposta não está em escolher um lado, mas em aplicar metodologias inteligentes de manejo integrado.</p>
+                <div id="grid-solucoes" class="grid-cards-dinamicos">
+                    </div>
+            </div>
+        </section>
+
+        <section class="secao-faq" aria-labelledby="titulo-faq">
+            <div class="container">
+                <h2 id="titulo-faq" class="titulo-secao">Perguntas Frequentes</h2>
+                
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false" id="faq1-btn">
+                            <span>O adubo químico é "veneno" para a planta?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content" role="region" aria-labelledby="faq1-btn" hidden>
+                            <p>Não. Os fertilizantes químicos fornecem minerais puros essenciais (como Nitrogênio, Fósforo e Potássio) idênticos aos minerais que a planta consome na natureza. O problema reside no **excesso de aplicação**, que saliniza o solo, mata microrganismos benéficos e causa desequilíbrios ecológicos.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false" id="faq2-btn">
+                            <span>Por que o adubo orgânico demora mais para fazer efeito?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="accordion-content" role="region" aria-labelledby="faq2-btn" hidden>
+                            <p>Porque os nutrientes do adubo orgânico estão presos em moléculas complexas. Os **microrganismos do solo precisam digerir** essa matéria orgânica primeiro (mineralização) para liberar os nutrientes de forma lenta e gradual, melhorando a estrutura física do solo ao longo do tempo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-reflexao" aria-labelledby="titulo-reflexao">
+            <div class="container">
+                <div class="caixa-reflexao">
+                    <h2 id="titulo-reflexao">Qual pegada ecológica você quer deixar na terra?</h2>
+                    <p>Agora que você explorou o funcionamento físico, químico e biológico dos fertilizantes, pense na sua realidade: Como as escolhas de consumo de alimentos na sua casa influenciam as práticas agrícolas do campo?</p>
+                    <a href="#simulador" class="btn btn-primario btn-cta-final">Fazer um Novo Teste no Simulador</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="rodape-principal">
+        <div class="container grid-rodape">
+            <div class="rodape-info">
+                <h4>Projeto EcoSolo</h4>
+                <p>Plataforma pedagógica aberta voltada ao desenvolvimento do pensamento crítico e científico sobre a sustentabilidade e práticas agrícolas modernas.</p>
+            </div>
+            <div class="rodape-creditos">
+                <h4>Créditos</h4>
+                <p>Hemanuelly Santos.</p>
+                <p>© 2026 - Todos os direitos reservados.</p>
+            </div>
+            <div class="rodape-redes">
+                <h4>Conecte-se</h4>
+                <div class="redes-icones">
+                    <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
